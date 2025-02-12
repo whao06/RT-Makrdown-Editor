@@ -1,0 +1,28 @@
+{
+  "name": "rt-makrdown-editor",
+  "version": "1.0.0",
+  "description": "A realtime markdown viewer",
+  "keywords": [
+    "markdown",
+    "sharejs"
+  ],
+  "homepage": "https://github.com/whao06/rt-markdown-editor#readme",
+  "bugs": {
+    "url": "https://github.com/whao06/rt-markdown-editor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whao06/rt-markdown-editor.git"
+  },
+  "license": "MIT",
+  "author": "Chan Wei Hao",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
