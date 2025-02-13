@@ -10,12 +10,14 @@ Before installing, ensure you have the following installed on your system:
  
 ## Installation
  1. Clone the Repository
+
     Open a terminal and run the following command to clone the repository:
  
    ```
     git clone https://github.com/whao06/RT-Markdown-Editor
    ```
  2. Install Dependencies
+
     Navigate into the project directory and install the required packages:
  
    ```
