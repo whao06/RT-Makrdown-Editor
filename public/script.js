@@ -135,4 +135,40 @@ window.onload = function() {
         var html = converter.makeHtml(markdownText);
         markdownArea.innerHTML = html;
     });
+
+    // Download Function
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        // Get the content from CodeMirror editor
+        const content = editor.getValue(); // Assuming your CodeMirror instance is named 'editor'
+        
+        // Create current timestamp for the filename
+        const now = new Date();
+        const timestamp = now.toISOString()
+            .replace(/[:.]/g, '-')
+            .replace('T', '_')
+            .split('.')[0];
+        
+        // Create filename with timestamp
+        const filename = `markdown_${timestamp}.md`;
+        
+        // Method 1: Using Blob and download attribute
+        const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+        
+        // Create download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = window.URL.createObjectURL(blob);
+        downloadLink.download = filename; // Set download attribute to force download
+        
+        // Make link invisible
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        
+        // Trigger download
+        downloadLink.click();
+        
+        // Cleanup
+        window.URL.revokeObjectURL(downloadLink.href);
+        document.body.removeChild(downloadLink);
+    });
+
 };

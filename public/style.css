@@ -3,12 +3,37 @@
 \*----------------------------------------------------------*/
 
 html, body, section, .full-height {
-    height: 100%;
+    height: calc(100% - 50px);
 }
 
 #markdown {
     overflow: auto;
     border-left: 1px solid black;
+}
+
+#downloadBtn {
+    position: absolute;
+    left: 43%;
+    transform: translateX(-50%);
+}
+
+/*----------------------------------------------------------*\
+    Toolbar
+\*----------------------------------------------------------*/
+
+.toolbar {
+    height: 50px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 10px;
+}
+
+.toolbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*----------------------------------------------------------*\
