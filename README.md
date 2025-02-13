@@ -28,7 +28,9 @@ Before installing, ensure you have the following installed on your system:
    ```
     node server.js
    ```
+
  The editor will now be running, and you can access it in localhost/8000 or any port you defined.
+ 
  ---
 
 ## References
